@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Patricio Cabrera - IT Operations and DevOps Engineer resume">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Patricio Cabrera - IT Operations &amp; DevOps Engineer</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #191919;
+      --muted: #555;
+      --rule: #c7c7c7;
+      --paper: #fff;
+      --canvas: #e9ebee;
+      --accent: #222;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { font-size: 16px; }
+
+    body {
+      margin: 0;
+      background: var(--canvas);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 9.4pt;
+      line-height: 1.28;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus-visible {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .resume {
+      display: grid;
+      gap: 12mm;
+      justify-content: center;
+      padding: 12mm 0;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      padding: 13mm 15mm 14mm;
+      background: var(--paper);
+      box-shadow: 0 2mm 7mm rgb(0 0 0 / 14%);
+    }
+
+    header {
+      padding-bottom: 2.5mm;
+      border-bottom: 1.6px solid var(--accent);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 18.5pt;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+    }
+
+    .role {
+      margin: 1.2mm 0 1.3mm;
+      color: var(--muted);
+      font-size: 10.8pt;
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
+    }
+
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0 2.4mm;
+      margin: 0;
+      color: #3f3f3f;
+      font-size: 8.65pt;
+      font-style: normal;
+    }
+
+    .contact > *:not(:last-child)::after {
+      content: "|";
+      margin-left: 2.4mm;
+      color: #a0a0a0;
+    }
+
+    section { margin-top: 2.8mm; }
+
+    h2 {
+      margin: 0 0 1.8mm;
+      padding-bottom: 0.8mm;
+      border-bottom: 0.7px solid var(--rule);
+      font-size: 9.6pt;
+      line-height: 1.1;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    p { margin: 0; }
+
+    .summary { color: #292929; }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .bullets li {
+      position: relative;
+      margin: 0 0 0.75mm;
+      padding-left: 3.1mm;
+    }
+
+    .bullets li::before {
+      position: absolute;
+      left: 0;
+      top: 0.12em;
+      content: "\25b8";
+      color: #999;
+      font-size: 7.2pt;
+    }
+
+    .entry { margin-top: 1.7mm; }
+
+    .entry:first-of-type { margin-top: 0; }
+
+    .entry-head,
+    .role-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      column-gap: 5mm;
+      min-width: 0;
+    }
+
+    .entry-head > :first-child,
+    .role-row > :first-child {
+      flex: 1 1 auto;
+      min-width: 0;
+      padding-right: 2mm;
+    }
+
+    .entry-head > :last-child,
+    .role-row > :last-child {
+      flex: 0 0 auto;
+    }
+
+    .entry-title,
+    .job-title {
+      font-weight: 700;
+    }
+
+    .entry-title { font-size: 10pt; }
+
+    .date,
+    .meta {
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .location,
+    .organizations {
+      margin: 0.15mm 0 0.6mm;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .entry-description {
+      margin: 0.9mm 0 1.2mm;
+      color: #515151;
+    }
+
+    .compact-lines li { margin-bottom: 0.7mm; }
+    .compact-lines li:last-child { margin-bottom: 0; }
+
+    .no-break { break-inside: avoid; page-break-inside: avoid; }
+
+    .screen-actions {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 10;
+    }
+
+    .site-back {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 10;
+      padding: 9px 13px;
+      border: 1px solid #c9c9c9;
+      border-radius: 999px;
+      background: rgb(255 255 255 / 94%);
+      color: #333;
+      font-size: 9.5pt;
+      font-weight: 600;
+      box-shadow: 0 3px 14px rgb(0 0 0 / 10%);
+      backdrop-filter: blur(8px);
+    }
+
+    .print-button {
+      appearance: none;
+      border: 0;
+      border-radius: 999px;
+      padding: 10px 16px;
+      background: #171717;
+      color: #fff;
+      font: 600 14px/1 Arial, Helvetica, sans-serif;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgb(0 0 0 / 24%);
+    }
+
+    .print-button:hover { background: #333; }
+    .print-button:focus-visible { outline: 3px solid #559cff; outline-offset: 2px; }
+
+    @media screen and (max-width: 860px) {
+      body { background: var(--paper); font-size: 10.8pt; }
+      .resume { display: block; padding: 0; }
+      .page {
+        width: 100%;
+        min-height: 0;
+        padding: 28px clamp(20px, 5vw, 44px);
+        box-shadow: none;
+      }
+      .page + .page { padding-top: 0; }
+      .entry-head,
+      .role-row {
+        display: block;
+      }
+      .entry-head > :first-child,
+      .role-row > :first-child {
+        padding-right: 0;
+      }
+      .date,
+      .meta { white-space: normal; }
+      .screen-actions { right: 12px; bottom: 12px; }
+      .site-back { top: 12px; left: 12px; }
+    }
+
+    @page { size: A4; margin: 0; }
+
+    @media print {
+      body {
+        background: #fff;
+        font-size: 9.4pt;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+      .resume { display: block; padding: 0; }
+      .page {
+        width: 210mm;
+        height: 297mm;
+        min-height: 297mm;
+        padding: 13mm 15mm 14mm;
+        box-shadow: none;
+        break-after: page;
+        page-break-after: always;
+        overflow: hidden;
+      }
+      .page:last-child {
+        break-after: auto;
+        page-break-after: auto;
+      }
+      .screen-actions,
+      .site-back { display: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="site-back" href="/" aria-label="Return to Patricio Cabrera home">&larr; patriciocabrera.com</a>
+  <main class="resume" aria-label="Resume of Patricio Cabrera">
+    <article class="page" aria-label="Resume page 1">
+      <header>
+        <h1>Patricio Cabrera</h1>
+        <p class="role">IT Operations &amp; DevOps Engineer</p>
+        <address class="contact">
+          <span>San Fernando, Buenos Aires, Argentina (UTC-3)</span>
+          <a href="mailto:patricio@patriciocabrera.com">patricio@patriciocabrera.com</a>
+          <a href="https://www.linkedin.com/in/patncab" target="_blank" rel="noreferrer">linkedin.com/in/patncab</a>
+          <a href="https://github.com/PatricioCabrera" target="_blank" rel="noreferrer">github.com/PatricioCabrera</a>
+        </address>
+      </header>
+
+      <section aria-labelledby="profile-title">
+        <h2 id="profile-title">Profile</h2>
+        <p class="summary">IT Operations and DevOps Engineer with 7+ years of experience across enterprise support, Microsoft 365, identity, infrastructure, and cloud operations. Hands-on with Exchange Online mail flow, connectors, shared mailboxes, online archives, and message tracing; Teams external collaboration controls; and SharePoint/OneDrive licensing, storage, and domain controls. Experienced with Microsoft Entra ID, OIDC/SAML integrations, app registrations, PowerShell automation, and business-critical support for 600+ users. Applies enterprise AI tools to accelerate complex automation across AWS IAM and Entra ID. Professional working English (B2/C1).</p>
+      </section>
+
+      <section aria-labelledby="impact-title">
+        <h2 id="impact-title">Selected Impact</h2>
+        <ul class="bullets">
+          <li><strong>Microsoft 365 operations.</strong> Administer Exchange Online mail flow, cloud connectors, mail flow rules, shared mailboxes, Online Archive, and message tracing; manage external-domain controls across Teams, SharePoint, and OneDrive, including licensing and storage expansion from 1 TB to 5 TB under E3.</li>
+          <li><strong>Identity modernization.</strong> Migrated 4 legacy applications from NTLM to Microsoft Entra ID using OIDC/SAML, eliminating local credentials.</li>
+          <li><strong>Terraform &amp; IaC adoption.</strong> Introduced Terraform-based workflows in the AWS organization, driving the shift from manual operations to component-based infrastructure as code. Replaced manual DBA backup tasks with snapshot-driven automation as part of this transition.</li>
+          <li><strong>Three production migrations to AWS.</strong> Owned end-to-end execution alongside AWS Professional Services, from Landing Zone Accelerator deployment to production go-live.</li>
+          <li><strong>Secure CI/CD federation.</strong> Designed centralized OIDC identity federation (identity-as-code) between CI/CD pipelines and every AWS account - short-lived credentials scoped per repository, eliminating static access keys.</li>
+          <li><strong>TLS / PKI governance.</strong> Built an internal certificate management tool for legacy on-prem applications and migrated production AWS workloads to ACM with auto-renewal, eliminating recurring certificate-expiration incidents.</li>
+          <li><strong>FinOps &amp; cost optimization (current).</strong> Driving AWS cost optimization across the organization - rightsizing, scheduling, storage-tier and licensing decisions - with projected savings presented monthly to management.</li>
+          <li><strong>SAP S/4HANA RISE migration.</strong> Led the AWS infrastructure track - hybrid connectivity, fileserver migration, satellite app integrations via RFC, and cutover coordination with SAP and consulting partner for 600+ users.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="experience-title">
+        <h2 id="experience-title">Experience</h2>
+        <div class="entry">
+          <div class="entry-head">
+            <p class="entry-title">Molinos Agro S.A.</p>
+            <p class="date"><time datetime="2022-09">Sep 2022</time> - Present</p>
+          </div>
+          <p class="location">Buenos Aires, Argentina</p>
+          <div class="role-row">
+            <p class="job-title">DevOps Engineer</p>
+            <p class="date"><time datetime="2023-11">Nov 2023</time> - Present</p>
+          </div>
+          <div class="role-row">
+            <p class="job-title">Infrastructure Engineer</p>
+            <p class="date"><time datetime="2022-09">Sep 2022</time> - <time datetime="2023-11">Nov 2023</time></p>
+          </div>
+          <p class="entry-description">Promoted from Infrastructure to DevOps after leading the modernization of legacy on-premise systems and initial AWS adoption. Sole DevOps owner of a 7-account hub-and-spoke AWS organization (Networking, Apps PRD/QA, Shared Services, Log Archive, Audit, Management) - VPC design, Transit Gateway routing, hybrid VPN connectivity, IAM Identity Center, and centralized DNS.</p>
+          <ul class="bullets">
+            <li><strong>Identity &amp; application access.</strong> Design IAM least-privilege roles and OIDC/SAML integrations; administer Microsoft Entra ID groups, App Registrations, Enterprise Applications, permissions, and cross-account access patterns.</li>
+            <li><strong>Monitoring &amp; observability.</strong> CloudWatch cross-account dashboards with SSO access; contributed to Zabbix + Grafana monitoring rollout for hybrid infrastructure.</li>
+            <li><strong>Production troubleshooting.</strong> Cross-stack issue resolution across Linux, Windows Server, SQL Server (RDS), VPC networking, DNS, mail flows, and identity systems in a live enterprise environment.</li>
+            <li><strong>CI/CD modernization.</strong> Migrated TFS on-premise to Azure DevOps Cloud, modernizing repositories and pipelines for the development team.</li>
+            <li><strong>High availability &amp; load balancing.</strong> Deployed and supported HAProxy + Keepalived and Windows NLB clusters for on-prem critical apps.</li>
+            <li><strong>Automation &amp; AI-assisted operations.</strong> Python, Bash, and PowerShell scripting for repetitive tasks, including scoped AWS IAM access, Entra ID group-to-role mappings, and App Registration/Enterprise App provisioning developed with enterprise ChatGPT/Codex and Claude.</li>
+            <li><strong>Hybrid &amp; multi-cloud operations.</strong> AWS and Azure networking, compute, DNS, storage, backup, and site-to-site VPN connectivity, including VPC/Transit Gateway architecture on AWS and VMs, Blob Storage, and Backup Vaults on Azure.</li>
+          </ul>
+        </div>
+      </section>
+    </article>
+
+    <article class="page" aria-label="Resume page 2">
+      <section class="entry no-break" aria-labelledby="support-title">
+        <div class="entry-head">
+          <p class="entry-title" id="support-title">IT Support &amp; Microcomputing Roles</p>
+          <p class="date"><time datetime="2019-03">Mar 2019</time> - <time datetime="2022-09">Sep 2022</time></p>
+        </div>
+        <p class="organizations">Febicom (assigned to Molinos Agro) · Textil Amesud · Six Working (assigned to Etex / Durlock)</p>
+        <p class="entry-description">Progressive 3.5-year track in end-user and infrastructure support: Active Directory administration, Domain Controller repair, JIRA triage and escalation, ERP/CRM support, mass equipment provisioning, and technical support to 150+ users. This trajectory built the operational foundation for the transition to infrastructure engineering at Molinos Agro.</p>
+      </section>
+
+      <section aria-labelledby="projects-title">
+        <h2 id="projects-title">Projects</h2>
+        <div class="entry no-break">
+          <div class="entry-head">
+            <p class="entry-title"><a href="https://github.com/PatricioCabrera/CloudLaunchpad" target="_blank" rel="noreferrer">CloudLaunchpad - AWS platform bootstrap</a></p>
+            <p class="meta">Personal project · in progress</p>
+          </div>
+          <p class="entry-description">Turns an empty AWS account into a production-ready environment in under 15 minutes. <strong>Modular Terraform</strong> for the full stack; <strong>GitHub Actions</strong> CI/CD authenticated via <strong>OIDC</strong> (no static credentials); <strong>Dockerized</strong> FastAPI service on <strong>ECS Fargate</strong>; <strong>RDS PostgreSQL</strong>; S3 + CloudFront delivery; <strong>SSM Parameter Store</strong> for secrets and configuration; CloudWatch logging and alarms. Built to practice secure-by-design, reproducible infrastructure end to end.</p>
+        </div>
+      </section>
+
+      <section aria-labelledby="stack-title">
+        <h2 id="stack-title">Technical Stack</h2>
+        <ul class="compact-lines">
+          <li><strong>AWS:</strong> IAM, EC2, VPC, RDS, Lambda, ECS Fargate, S3, CloudFront, Route 53, Transit Gateway, SSM Parameter Store, ACM, CloudWatch, SES, SQS, EventBridge, Control Tower, IAM Identity Center, Landing Zone Accelerator</li>
+          <li><strong>Microsoft 365:</strong> Exchange Online, Teams, SharePoint Online, OneDrive, mail flow and connectors, shared mailboxes, Online Archive, message tracing, licensing, and storage management</li>
+          <li><strong>Infrastructure as Code &amp; Automation:</strong> Terraform (modular), Python, Bash, PowerShell, AI-assisted scripting with enterprise ChatGPT/Codex and Claude</li>
+          <li><strong>CI/CD &amp; Containers:</strong> GitHub Actions (OIDC federation), Azure DevOps Pipelines, Git, Docker</li>
+          <li><strong>Security &amp; Identity:</strong> Microsoft Entra ID, App Registrations, Enterprise Applications, OIDC/SAML, Active Directory, IAM least-privilege, TLS/ACM/PKI, SPF and mail-flow troubleshooting</li>
+          <li><strong>ITSM:</strong> Jira Service Management</li>
+          <li><strong>Networking:</strong> VPC design, Transit Gateway, hybrid AWS/Azure site-to-site VPN, private/public DNS, HAProxy, Keepalived, Windows NLB</li>
+          <li><strong>Observability:</strong> AWS CloudWatch, Zabbix, Grafana</li>
+          <li><strong>Systems &amp; Databases:</strong> Linux (Ubuntu, CentOS, SUSE), Windows Server, SQL Server (RDS &amp; on-prem), PostgreSQL, VMware ESXi/vCenter, Veeam</li>
+          <li><strong>Cloud (secondary):</strong> Azure (VMs, DNS, Blob Storage, Backup Vaults, VPN); SAP S/4HANA RISE ecosystem (BTP, Cloud Connector, RFC)</li>
+        </ul>
+      </section>
+
+      <section class="no-break" aria-labelledby="education-title">
+        <h2 id="education-title">Education &amp; Certifications</h2>
+        <ul class="compact-lines">
+          <li><strong>AWS Solutions Architect - Associate</strong> <span class="meta">· in progress (Adrian Cantrill course, <a href="https://learn.cantrill.io" target="_blank" rel="noreferrer">learn.cantrill.io</a>)</span></li>
+          <li><strong>AWS Official Courses:</strong> Architecting on AWS · Advanced Architecting on AWS · DevOps Engineering on AWS</li>
+          <li><strong>Windows Server Hybrid Advanced Services</strong> <span class="meta">· Azure</span></li>
+          <li><strong>Certified Tech Developer Bootcamp</strong> <span class="meta">· Digital House - 2021-2023</span></li>
+          <li><strong>Continuous learning:</strong> Platzi (<a href="https://platzi.com/@PatchXploit" target="_blank" rel="noreferrer">platzi.com/@PatchXploit</a>) - ongoing tech curriculum</li>
+          <li><strong>Languages:</strong> Spanish (native) · English (B2/C1)</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+
+  <div class="screen-actions" aria-hidden="true">
+    <button class="print-button" type="button" onclick="window.print()" tabindex="-1">Print / Save PDF</button>
+  </div>
+</body>
+</html>
