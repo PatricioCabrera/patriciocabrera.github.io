@@ -52,6 +52,11 @@
     figure.wide { width: min(1000px, calc(100vw - 40px)); margin-left: 50%; transform: translateX(-50%); }
     figure.portrait { max-width: 440px; margin-left: auto; margin-right: auto; }
 
+    .prose h2 { margin: 1.8em 0 0.6em; font-size: 2rem; }
+    figure.pair { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    figure.pair figcaption { grid-column: 1 / -1; }
+    figure.pair img { height: 100%; object-fit: cover; }
+
     .closing-line { margin-top: 1.6em !important; font-size: 1.42rem; line-height: 1.45; }
 
     .post-foot { max-width: 680px; margin: 0 auto; padding: 28px 0 64px; border-top: 1px solid var(--line); }
@@ -82,7 +87,7 @@
         <p class="eyebrow">Notas · Viajes</p>
         <h1>Tiene que haber un lugar mejor</h1>
         <p class="dek">Del chico que confundía la capital con Estados Unidos a un sauna en Finlandia.</p>
-        <p class="meta">Patricio Cabrera · 8 de noviembre de 2026 · 4 min de lectura</p>
+        <p class="meta">Patricio Cabrera · 8 de noviembre de 2026 · 6 min de lectura</p>
       </div>
     </div>
   </div>
@@ -118,26 +123,44 @@
 
       <p>Fue, hasta ahora, el viaje más esperado de mi vida. Lo postergué durante años porque creía que no era para mí, hasta que finalmente lo hice.</p>
 
-      <figure class="portrait">
-        <img src="tres.jpg" width="719" height="1100" loading="lazy" alt="Tres hombres abrazados y sonriendo frente a una baranda, con el cielo nublado de fondo.">
-        <figcaption>Finlandia, julio de 2026.</figcaption>
+      <h2>El viaje</h2>
+
+      <p>Viajar solo es bueno para la mente. Te hace sentir pequeño y, al mismo tiempo, te muestra que el mundo no es peligroso; todo lo contrario: es inmenso, inabarcablemente grandioso. Estando solo te toca autogestionar la ansiedad entre tantas cosas que podrías hacer, y valértelas por vos mismo en una tierra inexplorada, aunque totalmente segura.</p>
+
+      <p>Al contrario de mi viaje a la selva ecuatoriana, donde todo es virgen y salvaje (quizás algún día lo documente), en Finlandia había una línea delgada entre tecnología y tradición, entre el status pomposo y el minimalismo.</p>
+
+      <figure class="wide pair">
+        <img src="porsche.jpg" width="900" height="1056" loading="lazy" alt="Un Porsche 911 GT3 RS negro estacionado frente a un edificio de ladrillo y vidrio en una calle de Helsinki.">
+        <img src="ferrari.jpg" width="900" height="1024" loading="lazy" alt="Un Ferrari rojo estacionado en una calle arbolada del centro de Helsinki.">
+        <figcaption>Helsinki, 6 de julio: el status pomposo, estacionado en calles sobrias.</figcaption>
       </figure>
 
       <p>Quedé encantado con el famoso sauna finlandés, una maravilla que me gustaría que fuera accesible en todo el mundo y que en Argentina solo existe dentro de spas y círculos premium. Me traje también su idea del orden: infraestructura avanzada, eficiencia y respeto por lo público, un bucle que se retroalimenta. Cuanto mejor funciona lo público, más se lo cuida; y cuanto más se lo cuida, mejor funciona.</p>
+
+      <p>Lo mejor del viaje fue conocer personas extraordinarias, y por suerte no hace falta ir hasta Finlandia para encontrarlas. Lo segundo mejor fue estar con gente que te empuja a hacer cosas incómodas. Soportar el dolor se hace más llevadero en grupo.</p>
 
       <figure class="wide">
         <img src="cosas-dificiles.jpg" width="1600" height="900" loading="lazy" alt="Diapositiva titulada «Hacer cosas difíciles» proyectada en una sala con ventanales a un lago: la duda es una brújula, no querer es un motivo, acción antes que motivación, identidad antes que disciplina.">
         <figcaption>«Hacer cosas difíciles», una de las charlas del viaje, frente al lago.</figcaption>
       </figure>
 
-      <p>No hay nada más profundamente esperanzador que cambiar el rumbo de la vida hacia el que uno realmente quiere.</p>
+      <p>Y lo mejor de Finlandia fue entender que no hay que buscar tanto afuera, porque basta con creer en uno mismo. Curiosamente, eso es lo más difícil. Es entender que la sabiduría nace de adentro hacia afuera, y eso nadie te lo va a quitar, ni en la pobreza extrema.</p>
 
-      <p class="closing-line">A cualquiera que me lea: viajen. Y si no se animan a hacer algo, háganlo igual.</p>
+      <figure class="portrait">
+        <img src="tres.jpg" width="719" height="1100" loading="lazy" alt="Tres hombres abrazados y sonriendo frente a una baranda, con el cielo nublado de fondo.">
+        <figcaption>Finlandia, julio de 2026.</figcaption>
+      </figure>
+
+      <p>No hay nada más profundamente esperanzador que cambiar el rumbo de la vida hacia el que uno realmente quiere. A cualquiera que me lea: viajen. Y si no se animan a hacer algo, háganlo igual.</p>
+
+      <p>Les agradezco a Marcos y a Matías por hacer posible esta experiencia, y a todos y cada uno por compartir algo de sí mismos y disfrutarla, porque su disfrute es mi disfrute.</p>
 
       <figure class="wide">
         <img src="grupo.jpg" width="1800" height="1013" loading="lazy" alt="Unas cuarenta personas posan juntas sobre un muelle de madera frente al mar, bajo un cielo con nubes.">
         <figcaption>El grupo completo, frente al mar.</figcaption>
       </figure>
+
+      <p class="closing-line">No sé cuándo volveré a tierras finlandesas. Pero ahora sé que el chico que confundía la capital con Estados Unidos terminó en Helsinki.</p>
     </article>
 
     <div class="post-foot">
