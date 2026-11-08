@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Los libros que leyó Patricio Cabrera: ciencia, historia, filosofía, psicología, salud, tecnología y finanzas.">
+  <meta name="theme-color" content="#f3f2ec">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:url" content="https://patriciocabrera.com/biblioteca/">
+  <meta property="og:title" content="Biblioteca — Patricio Cabrera">
+  <meta property="og:description" content="Veintidós libros terminados, por tema y con puntaje.">
+  <meta property="og:image" content="https://patriciocabrera.com/assets/og-card.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Biblioteca — Patricio Cabrera">
+  <meta name="twitter:description" content="Veintidós libros terminados, por tema y con puntaje.">
+  <meta name="twitter:image" content="https://patriciocabrera.com/assets/og-card.jpg">
+  <link rel="canonical" href="https://patriciocabrera.com/biblioteca/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
+  <link rel="stylesheet" href="/assets/site.css">
+  <title>Biblioteca — Patricio Cabrera</title>
+  <style>
+    .hero { padding: clamp(60px, 10vh, 112px) 0 48px; }
+    .hero .pale-dot { top: 30%; right: 18%; }
+
+    .reading { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+
+    .shelves { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 56px; }
+
+    .shelf h3 { padding-bottom: 10px; border-bottom: 1px solid var(--ink); font-size: 1.15rem; }
+    .shelf h3 small { margin-left: 8px; color: var(--muted); font-family: var(--sans); font-size: 0.78rem; font-weight: 500; }
+    .shelf ul { margin: 0 0 36px; padding: 0; list-style: none; }
+    .shelf li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 16px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid var(--line); }
+    .shelf b { font-family: var(--serif); font-size: 1.12rem; font-weight: 500; }
+    .shelf .author { grid-column: 1; color: var(--muted); font-size: 0.88rem; }
+    .shelf .stars { grid-column: 2; grid-row: 1 / span 2; align-self: center; }
+
+    @media (max-width: 860px) {
+      .shelves, .reading { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="beam">
+    <div class="shell">
+      <header class="site-header">
+        <a class="wordmark" href="/">Patricio Cabrera</a>
+        <nav class="site-nav" aria-label="Navegación principal">
+          <a href="/ciencia/">Ciencia</a>
+          <a href="/biblioteca/" aria-current="page">Biblioteca</a>
+          <a class="optional-sm" href="/#manuales">Manuales</a>
+          <a class="optional" href="https://github.com/PatricioCabrera" target="_blank" rel="noreferrer">GitHub</a>
+        </nav>
+      </header>
+
+      <div class="hero">
+        <span class="pale-dot" aria-hidden="true"></span>
+        <p class="eyebrow">Biblioteca · 22 libros terminados</p>
+        <h1>Lo que ya leí.</h1>
+        <p class="lead">Leer y terminar, no coleccionar. Acá están los libros que llegué a cerrar, ordenados por tema, con el puntaje que les puse al terminarlos. La pila de pendientes es bastante más larga.</p>
+        <blockquote class="epigraph" style="margin-top: 34px;">
+          <p>Quien está en todas partes no está en ninguna.</p>
+          <cite>Séneca, Cartas a Lucilio, 2 · nusquam est qui ubique est</cite>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+
+  <div class="shell">
+    <section class="section" aria-labelledby="now-title">
+      <h2 id="now-title">Leyendo ahora</h2>
+      <p class="section-intro">Forman parte de <a href="/ciencia/">mi año de ciencia</a>.</p>
+      <div class="reading">
+        <div class="card">
+          <p class="label">Astronomía</p>
+          <h3>Pale Blue Dot</h3>
+          <p class="by">Carl Sagan</p>
+        </div>
+        <div class="card">
+          <p class="label">Ingeniería</p>
+          <h3>The DevOps Handbook</h3>
+          <p class="by">Gene Kim, Jez Humble, Patrick Debois, John Willis y Nicole Forsgren</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="read-title">
+      <h2 id="read-title">Terminados</h2>
+      <p class="section-intro">Las estrellas son mi puntaje sobre cinco. Los que no tienen, todavía no los puntué.</p>
+
+      <div class="shelves">
+        <div>
+          <div class="shelf">
+            <h3>Ciencia <small>2</small></h3>
+            <ul>
+              <li><b>La levedad de las libélulas</b><span class="author">Carlos López-Otín</span><span class="stars" aria-label="5 de 5">★★★★★</span></li>
+              <li><b>El libro que tu cerebro no quiere leer</b><span class="author">David del Rosario</span><span class="stars" aria-label="5 de 5">★★★★★</span></li>
+            </ul>
+          </div>
+
+          <div class="shelf">
+            <h3>Historia <small>2</small></h3>
+            <ul>
+              <li><b>Sapiens: de animales a dioses</b><span class="author">Yuval Noah Harari</span><span class="stars" aria-label="5 de 5">★★★★★</span></li>
+              <li><b>El club psicodélico de Harvard</b><span class="author">Don Lattin</span><span class="stars" aria-label="4 de 5">★★★★</span></li>
+            </ul>
+          </div>
+
+          <div class="shelf">
+            <h3>Filosofía <small>3</small></h3>
+            <ul>
+              <li><b>Invicto</b><span class="author">Marcos Vázquez</span><span class="stars" aria-label="5 de 5">★★★★★</span></li>
+              <li><b>Antifrágil</b><span class="author">Nassim Taleb</span><span class="stars" aria-label="4 de 5">★★★★</span></li>
+              <li><b>The Obstacle Is the Way</b><span class="author">Ryan Holiday</span><span class="stars" aria-label="4 de 5">★★★★</span></li>
+            </ul>
+          </div>
+
+          <div class="shelf">
+            <h3>Tecnología <small>2</small></h3>
+            <ul>
+              <li><b>Life 3.0</b><span class="author">Max Tegmark</span></li>
+              <li><b>The Phoenix Project</b><span class="author">Gene Kim, Kevin Behr y George Spafford</span></li>
+            </ul>
+          </div>
+
+          <div class="shelf">
+            <h3>Productividad <small>1</small></h3>
+            <ul>
+              <li><b>4000 semanas</b><span class="author">Oliver Burkeman</span><span class="stars" aria-label="4 de 5">★★★★</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <div class="shelf">
+            <h3>Psicología <small>5</small></h3>
+            <ul>
+              <li><b>King, Warrior, Magician, Lover</b><span class="author">Robert Moore</span><span class="stars" aria-label="5 de 5">★★★★★</span></li>
+              <li><b>Tus microtraumas</b><span class="author">Rosa Molina</span><span class="stars" aria-label="5 de 5">★★★★★</span></li>
+              <li><b>No More Mr. Nice Guy</b><span class="author">Robert A. Glover</span><span class="stars" aria-label="5 de 5">★★★★★</span></li>
+              <li><b>12 reglas para vivir</b><span class="author">Jordan Peterson</span><span class="stars" aria-label="4 de 5">★★★★</span></li>
+              <li><b>Las cicatrices no duelen</b><span class="author">Anabel González</span></li>
+            </ul>
+          </div>
+
+          <div class="shelf">
+            <h3>Salud <small>4</small></h3>
+            <ul>
+              <li><b>El plan revolucionario</b><span class="author">Marcos Vázquez</span><span class="stars" aria-label="5 de 5">★★★★★</span></li>
+              <li><b>Desencadenado</b><span class="author">Marcos Vázquez</span><span class="stars" aria-label="5 de 5">★★★★★</span></li>
+              <li><b>Salud salvaje</b><span class="author">Marcos Vázquez</span><span class="stars" aria-label="5 de 5">★★★★★</span></li>
+              <li><b>Vida Inteligente</b><span class="author">Pablo Vázquez</span></li>
+            </ul>
+          </div>
+
+          <div class="shelf">
+            <h3>Economía y finanzas <small>3</small></h3>
+            <ul>
+              <li><b>Defendiendo lo indefendible</b><span class="author">Walter Block</span><span class="stars" aria-label="5 de 5">★★★★★</span></li>
+              <li><b>Invierte en ti</b><span class="author">Natalia de Santiago</span><span class="stars" aria-label="5 de 5">★★★★★</span></li>
+              <li><b>Early Retirement Extreme</b><span class="author">Jacob Lund Fisker</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>Actualizado el 8 de noviembre de 2026 · <a href="/">patriciocabrera.com</a></span>
+      <span><em>Un punto azul pálido, visto de cerca.</em></span>
+    </footer>
+  </div>
+</body>
+</html>

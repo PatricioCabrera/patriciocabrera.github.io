@@ -6,9 +6,14 @@ Source for Patricio Cabrera's professional website, hosted with GitHub Pages.
 
 - `/` — personal landing page (Spanish): projects, learning in public and interests
 - `/ciencia/` — science learning plan 2026–2027 (Spanish)
+- `/biblioteca/` — finished books, by topic (Spanish)
 - `/operations/` — IT Operations & DevOps résumé (English)
 
 The study manuals at `/manual-ia/` and `/manual-gcp/` are published from their own repositories as project pages under this domain.
+
+## Design
+
+Shared light theme ("Pale Blue Dot") in `assets/site.css`: Newsreader for headings and quotes, Inter for body text, night-blue ink on paper with a single pale blue dot. `/operations/` keeps its own print-ready résumé styles.
 
 ## Deployment
 

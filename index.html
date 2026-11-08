@@ -3,345 +3,200 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Patricio Cabrera — ingeniero DevOps y de plataforma cloud en Buenos Aires. Lo que construyo, lo que leo y lo que voy aprendiendo en público.">
-  <meta name="theme-color" content="#0b0f14">
+  <meta name="description" content="Patricio Cabrera. Infraestructura y cloud de día; ciencia, historia y filosofía el resto del tiempo. Lo que sé, lo comparto. Lo que dudo, lo muestro. Lo que descubro, lo documento.">
+  <meta name="theme-color" content="#f3f2ec">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_AR">
   <meta property="og:url" content="https://patriciocabrera.com/">
-  <meta property="og:title" content="Patricio Cabrera — Construyo sistemas. Aprendo en público.">
-  <meta property="og:description" content="Ingeniería cloud, manuales técnicos y un plan de ciencia abierto: lo que construyo y lo que voy aprendiendo.">
+  <meta property="og:title" content="Patricio Cabrera — un cuaderno abierto">
+  <meta property="og:description" content="Lo que sé, lo comparto. Lo que dudo, lo muestro. Lo que descubro, lo documento.">
   <meta property="og:image" content="https://patriciocabrera.com/assets/og-card.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Patricio Cabrera">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Patricio Cabrera — Construyo sistemas. Aprendo en público.">
-  <meta name="twitter:description" content="Ingeniería cloud, manuales técnicos y un plan de ciencia abierto: lo que construyo y lo que voy aprendiendo.">
+  <meta name="twitter:title" content="Patricio Cabrera — un cuaderno abierto">
+  <meta name="twitter:description" content="Lo que sé, lo comparto. Lo que dudo, lo muestro. Lo que descubro, lo documento.">
   <meta name="twitter:image" content="https://patriciocabrera.com/assets/og-card.jpg">
   <link rel="canonical" href="https://patriciocabrera.com/">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <title>Patricio Cabrera — Construyo sistemas. Aprendo en público.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
+  <link rel="stylesheet" href="/assets/site.css">
+  <title>Patricio Cabrera — un cuaderno abierto</title>
   <style>
-    :root {
-      color-scheme: dark;
-      --bg: #0b0f14;
-      --panel: #111821;
-      --line: #263341;
-      --text: #f2f5f7;
-      --muted: #9aa8b5;
-      --accent: #64d8a4;
-      --accent-soft: rgb(100 216 164 / 12%);
-      --warm: #e8b86a;
-    }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-
-    body {
-      min-height: 100vh;
-      margin: 0;
-      background:
-        radial-gradient(circle at 82% 12%, rgb(100 216 164 / 9%), transparent 32rem),
-        var(--bg);
-      color: var(--text);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    a { color: inherit; }
-
-    .shell { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
-
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      min-height: 76px;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .wordmark { font-weight: 720; letter-spacing: -0.02em; text-decoration: none; }
-
-    nav { display: flex; gap: 22px; }
-    nav a { color: var(--muted); font-size: 0.9rem; text-decoration: none; }
-    nav a:hover, nav a:focus-visible { color: var(--text); }
-
     .hero {
       display: grid;
-      grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.75fr);
-      gap: clamp(48px, 8vw, 108px);
+      grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.72fr);
+      gap: clamp(40px, 7vw, 96px);
       align-items: end;
-      padding: clamp(70px, 12vh, 136px) 0 clamp(56px, 9vh, 96px);
+      padding: clamp(64px, 11vh, 124px) 0 clamp(56px, 9vh, 92px);
     }
 
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      margin: 0 0 24px;
-      color: var(--accent);
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.13em;
-      text-transform: uppercase;
+    .hero .quote p { font-family: var(--serif); font-size: clamp(2.6rem, 6.4vw, 5.1rem); line-height: 1.03; letter-spacing: -0.02em; }
+
+    .manifesto {
+      margin: 36px 0 0;
+      padding: 0;
+      list-style: none;
+      font-family: var(--serif);
+      font-size: clamp(1.2rem, 2.1vw, 1.42rem);
+      line-height: 1.45;
     }
 
-    .eyebrow::before {
-      width: 7px; height: 7px;
-      border-radius: 50%;
-      background: var(--accent);
-      box-shadow: 0 0 0 5px var(--accent-soft);
-      content: "";
-    }
+    .manifesto li + li { margin-top: 2px; }
+    .manifesto span { color: var(--muted); }
 
-    h1 {
-      max-width: 810px;
-      margin: 0;
-      font-size: clamp(3.1rem, 8vw, 7rem);
-      line-height: 0.91;
-      letter-spacing: -0.065em;
-    }
+    .bio { max-width: 620px; margin: 26px 0 0; color: var(--ink-2); }
 
-    .intro {
-      max-width: 640px;
-      margin: 34px 0 0;
-      color: var(--muted);
-      font-size: clamp(1.05rem, 2vw, 1.25rem);
-      line-height: 1.65;
-    }
-
-    .intro strong { color: var(--text); font-weight: 620; }
-
-    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 38px; }
-
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 46px;
-      padding: 0 18px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      color: var(--text);
-      font-size: 0.92rem;
-      font-weight: 650;
-      text-decoration: none;
-      transition: border-color 160ms ease, background 160ms ease, transform 160ms ease;
-    }
-
-    .button.primary { border-color: var(--accent); background: var(--accent); color: #07120d; }
-    .button:hover, .button:focus-visible { border-color: var(--accent); transform: translateY(-1px); }
-    .button:not(.primary):hover, .button:not(.primary):focus-visible { background: var(--accent-soft); }
-
-    .panel {
-      padding: 26px;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      background: linear-gradient(155deg, rgb(255 255 255 / 3%), transparent 70%);
-    }
-
-    .label {
-      margin: 0 0 16px;
-      color: var(--muted);
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
+    .hero .pale-dot { top: 16%; right: 22%; }
 
     .now-list { margin: 0; padding: 0; list-style: none; }
     .now-list li { padding: 13px 0; border-top: 1px solid var(--line); }
     .now-list li:first-child { border-top: 0; padding-top: 0; }
-    .now-list small { display: block; color: var(--muted); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
+    .now-list small { display: block; color: var(--muted); font-size: 0.7rem; font-weight: 650; letter-spacing: 0.1em; text-transform: uppercase; }
     .now-list span { display: block; margin-top: 3px; font-size: 0.95rem; }
     .now-list a { text-decoration: none; border-bottom: 1px solid var(--line); }
     .now-list a:hover, .now-list a:focus-visible { border-color: currentColor; }
     .updated { margin: 16px 0 0; color: var(--muted); font-size: 0.78rem; }
 
-    section { padding: 56px 0; border-top: 1px solid var(--line); scroll-margin-top: 16px; }
+    .shelf { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 32px; margin: 0 0 28px; padding: 0; list-style: none; }
+    .shelf li { padding: 14px 0; border-top: 1px solid var(--line); }
+    .shelf b { display: block; font-family: var(--serif); font-size: 1.12rem; font-weight: 500; }
+    .shelf span { color: var(--muted); font-size: 0.88rem; }
 
-    h2 {
-      margin: 0 0 8px;
-      font-size: clamp(1.7rem, 3.4vw, 2.4rem);
-      letter-spacing: -0.04em;
-      line-height: 1.1;
-    }
-
-    .section-intro { max-width: 640px; margin: 0 0 30px; color: var(--muted); }
-
-    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
-    .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-
-    .tile {
-      display: flex;
-      flex-direction: column;
-      padding: 22px;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      background: linear-gradient(155deg, rgb(255 255 255 / 3%), transparent 70%);
-      text-decoration: none;
-      transition: border-color 160ms ease, transform 160ms ease;
-    }
-
-    .tile:hover, .tile:focus-visible { border-color: var(--accent); transform: translateY(-2px); }
-    .tile .kind { color: var(--accent); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
-    .tile strong { display: block; margin-top: 10px; font-size: 1.12rem; letter-spacing: -0.02em; }
-    .tile span.desc { display: block; margin-top: 8px; color: var(--muted); font-size: 0.9rem; line-height: 1.5; }
-    .tile .go { margin-top: auto; padding-top: 18px; color: var(--muted); font-size: 0.82rem; }
-    .tile:hover .go, .tile:focus-visible .go { color: var(--accent); }
-
-    .interests { display: flex; flex-wrap: wrap; gap: 10px; margin: 0; padding: 0; list-style: none; }
-
-    .interests li {
-      padding: 8px 14px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      color: #c9d3dc;
-      font-size: 0.92rem;
-    }
-
-    .contact {
-      display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-      gap: 32px;
-      align-items: end;
-    }
-
-    .contact p { margin: 0; color: var(--muted); font-size: 1.05rem; max-width: 560px; }
-
-    footer {
-      display: flex;
-      justify-content: space-between;
-      min-height: 76px;
-      padding-top: 22px;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 0.78rem;
-    }
+    .contact { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 32px; align-items: end; }
+    .contact p.text { margin: 0; color: var(--ink-2); font-size: 1.05rem; max-width: 540px; }
 
     @media (max-width: 900px) {
-      .grid { grid-template-columns: 1fr; }
-      .grid.two { grid-template-columns: 1fr; }
+      .shelf { grid-template-columns: 1fr; }
       .contact { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 760px) {
-      .shell { width: min(100% - 32px, 1120px); }
-      header { min-height: 66px; }
-      nav { gap: 14px; }
-      nav .optional { display: none; }
-      .hero { grid-template-columns: 1fr; align-items: start; padding: 64px 0 56px; }
-      h1 { font-size: clamp(3rem, 15vw, 5.3rem); }
-      footer { min-height: 66px; }
-      footer span:last-child { display: none; }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      .button, .tile { transition: none; }
+      .hero { grid-template-columns: 1fr; align-items: start; padding: 56px 0 52px; }
+      .hero .pale-dot { top: 28px; right: 12%; }
     }
   </style>
 </head>
 <body>
-  <div class="shell">
-    <header>
-      <a class="wordmark" href="/">Patricio Cabrera</a>
-      <nav aria-label="Navegación principal">
-        <a href="/ciencia/">Ciencia</a>
-        <a href="#aprender">Manuales</a>
-        <a class="optional" href="https://github.com/PatricioCabrera" target="_blank" rel="noreferrer">GitHub</a>
-        <a class="optional" href="https://www.linkedin.com/in/patncab" target="_blank" rel="noreferrer">LinkedIn</a>
-      </nav>
-    </header>
+  <div class="beam">
+    <div class="shell">
+      <header class="site-header">
+        <a class="wordmark" href="/">Patricio Cabrera</a>
+        <nav class="site-nav" aria-label="Navegación principal">
+          <a href="/ciencia/">Ciencia</a>
+          <a href="/biblioteca/">Biblioteca</a>
+          <a class="optional-sm" href="#manuales">Manuales</a>
+          <a class="optional" href="https://github.com/PatricioCabrera" target="_blank" rel="noreferrer">GitHub</a>
+        </nav>
+      </header>
 
-    <div class="hero">
-      <div>
-        <p class="eyebrow">San Fernando, Buenos Aires</p>
-        <h1>Construyo sistemas.<br>Aprendo en público.</h1>
-        <p class="intro">
-          Soy Patricio Cabrera, <strong>ingeniero DevOps y de plataforma cloud</strong>. Además de la nube me interesan la ciencia, la historia, la geografía y la música. Acá junto lo que construyo, lo que leo y lo que voy aprendiendo, para quien quiera recorrer el mismo camino.
-        </p>
-        <div class="actions">
-          <a class="button primary" href="/ciencia/">Ver mi año de ciencia</a>
-          <a class="button" href="#aprender">Manuales técnicos</a>
+      <div class="hero">
+        <span class="pale-dot" aria-hidden="true"></span>
+        <div>
+          <p class="eyebrow">San Fernando, Buenos Aires</p>
+          <blockquote class="quote">
+            <p>No hay camino fácil de la tierra a las estrellas.</p>
+            <cite>Séneca, <em>Hercules furens</em> · non est ad astra mollibus e terris via</cite>
+          </blockquote>
+          <ul class="manifesto">
+            <li>Lo que sé, lo comparto.</li>
+            <li>Lo que dudo, lo muestro.</li>
+            <li>Lo que descubro, lo documento.</li>
+          </ul>
+          <p class="bio">
+            Soy Patricio. Trabajo en infraestructura y cloud: empecé en soporte técnico en 2019 y fui armando el camino con práctica y con la confianza de quienes me dieron una oportunidad. Fuera del trabajo leo ciencia, historia y filosofía, y le hago lugar a la música. Escribo para entender lo que aprendo. Esta página es eso: un cuaderno abierto.
+          </p>
+          <div class="actions">
+            <a class="button primary" href="/ciencia/">Mi año de ciencia</a>
+            <a class="button" href="/biblioteca/">La biblioteca</a>
+          </div>
         </div>
+
+        <aside class="card" aria-label="Qué estoy haciendo ahora">
+          <p class="label">Ahora</p>
+          <ul class="now-list">
+            <li><small>Leyendo</small><span><a href="/ciencia/#pale-blue-dot">Pale Blue Dot</a>, de Carl Sagan</span></li>
+            <li><small>Estudiando</small><span><a href="/ciencia/#linear-algebra">Álgebra lineal</a>, con 3Blue1Brown</span></li>
+            <li><small>Construyendo</small><span><a href="https://github.com/PatricioCabrera/CloudLaunchpad" target="_blank" rel="noreferrer">CloudLaunchpad</a>, una plataforma AWS desde cero</span></li>
+            <li><small>En el trabajo</small><span>Plataforma AWS multi-cuenta, gobierno cloud y FinOps</span></li>
+          </ul>
+          <p class="updated">Actualizado en noviembre de 2026</p>
+        </aside>
       </div>
-
-      <aside class="panel" aria-label="Qué estoy haciendo ahora">
-        <p class="label">Ahora</p>
-        <ul class="now-list">
-          <li><small>Leyendo</small><span><a href="/ciencia/#pale-blue-dot">Pale Blue Dot</a>, de Carl Sagan</span></li>
-          <li><small>Estudiando</small><span><a href="/ciencia/#linear-algebra">Álgebra lineal</a> con 3Blue1Brown</span></li>
-          <li><small>Construyendo</small><span><a href="https://github.com/PatricioCabrera/CloudLaunchpad" target="_blank" rel="noreferrer">CloudLaunchpad</a>, una plataforma AWS desde cero</span></li>
-          <li><small>Trabajando en</small><span>Plataforma AWS multi-cuenta, gobierno cloud y FinOps</span></li>
-        </ul>
-        <p class="updated">Actualizado en noviembre de 2026</p>
-      </aside>
     </div>
+  </div>
 
-    <section id="aprender" aria-labelledby="learn-title">
-      <h2 id="learn-title">Aprender en público</h2>
-      <p class="section-intro">Notas y manuales que escribo mientras estudio. Están en español y son libres de usar.</p>
+  <div class="shell">
+    <section class="section" id="manuales" aria-labelledby="learn-title">
+      <h2 id="learn-title">Lo que aprendo, en voz alta</h2>
+      <p class="section-intro">No escribo para enseñar, escribo para entender. Si de paso le sirve a alguien, mejor. Todo está en español y es libre de usar.</p>
       <div class="grid">
-        <a class="tile" href="/ciencia/">
-          <span class="kind">Plan de estudio · 2026–2027</span>
-          <strong>Un año de ciencia</strong>
-          <span class="desc">Astronomía, física, química, biología del comportamiento y la matemática detrás de la IA: libros, videos y cronograma.</span>
+        <a class="card tile" href="/ciencia/">
+          <span class="label">Plan de estudio · 2026–2027</span>
+          <h3>Un año de ciencia</h3>
+          <span class="desc">Astronomía, física, química, biología del comportamiento y la matemática que hace funcionar a la IA. Libros, videos y un cronograma que entra después del trabajo.</span>
           <span class="go">Abrir el plan →</span>
         </a>
-        <a class="tile" href="/manual-ia/">
-          <span class="kind">Manual</span>
-          <strong>Arquitectura de agentes de IA</strong>
-          <span class="desc">Modelos, harness, MCP, contexto, identidad, observabilidad y despliegue de agentes en entornos corporativos.</span>
+        <a class="card tile" href="/manual-ia/">
+          <span class="label">Manual</span>
+          <h3>Arquitectura de agentes de IA</h3>
+          <span class="desc">Modelos, harness, MCP, contexto, identidad, observabilidad y despliegue de agentes en una empresa de verdad.</span>
           <span class="go">Leer el manual →</span>
         </a>
-        <a class="tile" href="/manual-gcp/">
-          <span class="kind">Manual</span>
-          <strong>GCP para profesionales de AWS</strong>
-          <span class="desc">Google Cloud explicado desde lo que ya sabés de AWS, con las equivalencias y dónde dejan de serlo.</span>
+        <a class="card tile" href="/manual-gcp/">
+          <span class="label">Manual</span>
+          <h3>GCP para gente de AWS</h3>
+          <span class="desc">Google Cloud explicado desde lo que ya sabés de AWS: las equivalencias, y dónde dejan de serlo.</span>
           <span class="go">Leer el manual →</span>
         </a>
       </div>
     </section>
 
-    <section aria-labelledby="build-title">
+    <section class="section" aria-labelledby="library-title">
+      <h2 id="library-title">La biblioteca</h2>
+      <p class="section-intro">Veintidós libros terminados y muchos más esperando en la pila. Algunos de mis favoritos:</p>
+      <ul class="shelf">
+        <li><b>Sapiens</b><span>Yuval Noah Harari · Historia</span></li>
+        <li><b>Life 3.0</b><span>Max Tegmark · Tecnología</span></li>
+        <li><b>Invicto</b><span>Marcos Vázquez · Filosofía</span></li>
+        <li><b>Vida Inteligente</b><span>Pablo Vázquez · Salud</span></li>
+        <li><b>La levedad de las libélulas</b><span>Carlos López-Otín · Ciencia</span></li>
+        <li><b>El libro que tu cerebro no quiere leer</b><span>David del Rosario · Ciencia</span></li>
+      </ul>
+      <a class="button" href="/biblioteca/">Ver los veintidós →</a>
+    </section>
+
+    <section class="section" aria-labelledby="build-title">
       <h2 id="build-title">Lo que construyo</h2>
-      <p class="section-intro">Proyectos personales y mi recorrido profesional.</p>
+      <p class="section-intro">Proyectos propios y el recorrido profesional.</p>
       <div class="grid two">
-        <a class="tile" href="https://github.com/PatricioCabrera/CloudLaunchpad" target="_blank" rel="noreferrer">
-          <span class="kind">Proyecto · en curso</span>
-          <strong>CloudLaunchpad</strong>
+        <a class="card tile" href="https://github.com/PatricioCabrera/CloudLaunchpad" target="_blank" rel="noreferrer">
+          <span class="label">Proyecto · en curso</span>
+          <h3>CloudLaunchpad</h3>
           <span class="desc">Una cuenta AWS vacía convertida en un entorno listo para producción: Terraform modular, GitHub Actions con OIDC, ECS Fargate y RDS.</span>
           <span class="go">Ver en GitHub →</span>
         </a>
-        <a class="tile" href="/operations/">
-          <span class="kind">Currículum · en inglés</span>
-          <strong>IT Operations &amp; DevOps</strong>
+        <a class="card tile" href="/operations/">
+          <span class="label">Currículum · en inglés</span>
+          <h3>IT Operations &amp; DevOps</h3>
           <span class="desc">Siete años entre soporte, infraestructura y cloud: AWS multi-cuenta, identidad, Microsoft 365 e infraestructura híbrida.</span>
           <span class="go">Ver el CV →</span>
         </a>
       </div>
     </section>
 
-    <section aria-labelledby="interests-title">
-      <h2 id="interests-title">Lo que me interesa</h2>
-      <p class="section-intro">Más allá del trabajo.</p>
-      <ul class="interests">
-        <li>Astronomía y ciencia</li>
-        <li>Historia y geografía</li>
-        <li>Música</li>
-        <li>Pensamiento sistémico</li>
-        <li>Inteligencia artificial</li>
-        <li>Gestión del conocimiento</li>
-      </ul>
-    </section>
-
-    <section aria-labelledby="contact-title">
+    <section class="section" aria-labelledby="contact-title">
       <div class="contact">
         <div>
-          <h2 id="contact-title">Hablemos</h2>
-          <p>Si estás aprendiendo algo parecido, querés intercambiar notas o te sirvió alguno de los manuales, escribime.</p>
+          <h2 id="contact-title">Esto se hace de a muchos</h2>
+          <blockquote class="epigraph">
+            <p>Los hombres, mientras enseñan, aprenden.</p>
+            <cite>Séneca, Cartas a Lucilio, 7</cite>
+          </blockquote>
+          <p class="text">Si estás aprendiendo algo parecido, si algo de acá te sirvió o si pensás distinto, escribime.</p>
         </div>
         <div class="actions">
           <a class="button primary" href="mailto:patricio@patriciocabrera.com">Escribime</a>
@@ -351,9 +206,9 @@
       </div>
     </section>
 
-    <footer>
+    <footer class="site-footer">
       <span>&copy; 2026 Patricio Cabrera</span>
-      <span>Sistemas · Ciencia · Aprendizaje</span>
+      <span><em>Un punto azul pálido, visto de cerca.</em></span>
     </footer>
   </div>
 </body>
