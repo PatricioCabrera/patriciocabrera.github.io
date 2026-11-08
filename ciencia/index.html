@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Plan de aprendizaje de ciencia 2026–2027 de Patricio Cabrera: astronomía, física, química, biología del comportamiento y la matemática detrás de la IA.">
+  <meta name="theme-color" content="#0b0f14">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:url" content="https://patriciocabrera.com/ciencia/">
+  <meta property="og:title" content="Un año de ciencia — Patricio Cabrera">
+  <meta property="og:description" content="Libros, videos y cronograma para perderle el miedo a la notación científica y entender la matemática de la IA.">
+  <meta property="og:image" content="https://patriciocabrera.com/assets/og-card.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Un año de ciencia — Patricio Cabrera">
+  <meta name="twitter:description" content="Libros, videos y cronograma para perderle el miedo a la notación científica y entender la matemática de la IA.">
+  <meta name="twitter:image" content="https://patriciocabrera.com/assets/og-card.jpg">
+  <link rel="canonical" href="https://patriciocabrera.com/ciencia/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <title>Un año de ciencia — Patricio Cabrera</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0b0f14;
+      --panel: #111821;
+      --line: #263341;
+      --text: #f2f5f7;
+      --muted: #9aa8b5;
+      --accent: #64d8a4;
+      --accent-soft: rgb(100 216 164 / 12%);
+      --warm: #e8b86a;
+      --warm-soft: rgb(232 184 106 / 12%);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 85% 6%, rgb(100 216 164 / 8%), transparent 30rem),
+        var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; }
+
+    .shell { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 76px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .wordmark { font-weight: 720; letter-spacing: -0.02em; text-decoration: none; }
+
+    nav { display: flex; gap: 22px; }
+    nav a { color: var(--muted); font-size: 0.9rem; text-decoration: none; }
+    nav a:hover, nav a:focus-visible, nav a[aria-current="page"] { color: var(--text); }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 22px;
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 5px var(--accent-soft);
+      content: "";
+    }
+
+    .hero { padding: clamp(64px, 11vh, 120px) 0 56px; }
+
+    h1 {
+      max-width: 900px;
+      margin: 0;
+      font-size: clamp(3rem, 8vw, 6.4rem);
+      line-height: 0.93;
+      letter-spacing: -0.06em;
+    }
+
+    .lead {
+      max-width: 700px;
+      margin: 30px 0 0;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+      line-height: 1.65;
+    }
+
+    .lead strong { color: var(--text); font-weight: 620; }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      margin-top: 44px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .stat { padding: 20px 22px; border-left: 1px solid var(--line); }
+    .stat:first-child { border-left: 0; }
+    .stat b { display: block; font-size: 1.9rem; letter-spacing: -0.04em; line-height: 1.1; }
+    .stat span { color: var(--muted); font-size: 0.84rem; }
+
+    section { padding: 56px 0; border-top: 1px solid var(--line); }
+
+    h2 {
+      margin: 0 0 8px;
+      font-size: clamp(1.7rem, 3.4vw, 2.4rem);
+      letter-spacing: -0.04em;
+      line-height: 1.1;
+    }
+
+    .section-intro { max-width: 680px; margin: 0 0 32px; color: var(--muted); }
+
+    /* Now */
+    .now {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: linear-gradient(155deg, rgb(255 255 255 / 3%), transparent 70%);
+    }
+
+    .label {
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .card h3 { margin: 0; font-size: 1.15rem; letter-spacing: -0.02em; }
+    .card .by { margin: 2px 0 0; color: var(--muted); font-size: 0.88rem; }
+
+    .bar {
+      height: 6px;
+      margin-top: 16px;
+      border-radius: 999px;
+      background: var(--line);
+      overflow: hidden;
+    }
+
+    .bar i { display: block; height: 100%; border-radius: inherit; background: var(--accent); }
+    .bar-note { margin: 8px 0 0; color: var(--muted); font-size: 0.82rem; }
+
+    /* Lanes legend */
+    .legend { display: flex; flex-wrap: wrap; gap: 10px 22px; margin: 0 0 26px; font-size: 0.86rem; color: var(--muted); }
+    .legend span { display: inline-flex; align-items: center; gap: 8px; }
+    .dot { width: 9px; height: 9px; border-radius: 50%; }
+    .dot.read { background: var(--warm); }
+    .dot.study { background: var(--accent); }
+
+    /* Timeline */
+    .timeline { margin: 0; padding: 0; list-style: none; }
+
+    .phase {
+      display: grid;
+      grid-template-columns: 170px minmax(0, 1fr) minmax(0, 1fr);
+      gap: 18px;
+      padding: 20px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .phase:first-child { border-top: 0; padding-top: 0; }
+
+    .when { font-weight: 700; font-size: 0.92rem; }
+    .when small { display: block; color: var(--muted); font-weight: 500; font-size: 0.8rem; }
+
+    .lane { padding-left: 14px; border-left: 2px solid var(--line); }
+    .lane.read { border-color: var(--warm); }
+    .lane.study { border-color: var(--accent); }
+    .lane p { margin: 0; font-size: 0.94rem; }
+    .lane p + p { margin-top: 6px; }
+    .lane a { text-decoration: none; border-bottom: 1px solid var(--line); }
+    .lane a:hover, .lane a:focus-visible { border-color: currentColor; }
+    .lane .note { color: var(--muted); font-size: 0.84rem; }
+
+    .tag-now {
+      display: inline-block;
+      margin-left: 8px;
+      padding: 1px 8px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      vertical-align: 2px;
+    }
+
+    /* Items */
+    .items {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .item { scroll-margin-top: 24px; display: flex; flex-direction: column; }
+    .item:target { border-color: var(--accent); }
+
+    .chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; }
+
+    .chip {
+      padding: 2px 9px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 0.72rem;
+      font-weight: 600;
+    }
+
+    .chip.read { border-color: rgb(232 184 106 / 45%); color: var(--warm); }
+    .chip.study { border-color: rgb(100 216 164 / 45%); color: var(--accent); }
+
+    .item p.learn { margin: 12px 0 0; color: #c9d3dc; font-size: 0.94rem; }
+    .item .foot { margin-top: auto; padding-top: 14px; color: var(--muted); font-size: 0.8rem; }
+    .item .foot a { color: var(--accent); text-decoration: none; }
+    .item .foot a:hover, .item .foot a:focus-visible { text-decoration: underline; }
+
+    .backlog .card { border-style: dashed; }
+
+    /* Papers */
+    .tips { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+    .tips .card p { margin: 8px 0 0; color: #c9d3dc; font-size: 0.93rem; }
+
+    .glyphs { margin: 0; padding: 0; list-style: none; }
+    .glyphs li { display: grid; grid-template-columns: 34px 1fr; gap: 6px; padding: 6px 0; border-top: 1px solid var(--line); font-size: 0.92rem; color: #c9d3dc; }
+    .glyphs li:first-child { border-top: 0; }
+    .glyphs b { color: var(--accent); font-family: "Cambria Math", "STIX Two Math", Georgia, serif; font-size: 1.15rem; font-weight: 500; }
+
+    .principle {
+      margin: 0;
+      padding: 26px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--warm-soft);
+      color: var(--text);
+      font-size: 1.05rem;
+    }
+
+    .principle span { color: var(--muted); }
+    .closing { padding: 8px 0 56px; }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 24px 0 40px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    footer a { text-decoration: none; }
+    footer a:hover { color: var(--text); }
+
+    @media (max-width: 860px) {
+      .phase { grid-template-columns: 1fr; gap: 10px; }
+      .items, .now, .tips { grid-template-columns: 1fr; }
+      .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .stat:nth-child(3) { border-left: 0; }
+      .stat:nth-child(n+3) { border-top: 1px solid var(--line); }
+    }
+
+    @media (max-width: 760px) {
+      .shell { width: min(100% - 32px, 1120px); }
+      header { min-height: 66px; }
+      nav { gap: 14px; }
+      nav .optional { display: none; }
+      footer { flex-direction: column; }
+    }
+
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <a class="wordmark" href="/">Patricio Cabrera</a>
+      <nav aria-label="Navegación principal">
+        <a href="/ciencia/" aria-current="page">Ciencia</a>
+        <a href="/#aprender">Manuales</a>
+        <a class="optional" href="https://github.com/PatricioCabrera" target="_blank" rel="noreferrer">GitHub</a>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <p class="eyebrow">Aprender en público · nov 2026 → nov 2027</p>
+      <h1>Un año de ciencia.</h1>
+      <p class="lead">
+        Mi plan para <strong>perderle el miedo a la notación de los papers</strong>, entender las bases de la física, la química y la biología del comportamiento, y llegar a la <strong>matemática que hace funcionar a la IA</strong>. Todo después del trabajo, en dos carriles: lectura de noche y estudio con papel al lado.
+      </p>
+      <div class="stats" role="list">
+        <div class="stat" role="listitem"><b>9</b><span>libros principales</span></div>
+        <div class="stat" role="listitem"><b>3</b><span>series de video</span></div>
+        <div class="stat" role="listitem"><b>2</b><span>libros en la cola</span></div>
+        <div class="stat" role="listitem"><b>~30′</b><span>por sesión de estudio</span></div>
+      </div>
+    </div>
+
+    <section aria-labelledby="now-title">
+      <h2 id="now-title">Ahora</h2>
+      <p class="section-intro">Lo que tengo abierto esta semana.</p>
+      <div class="now">
+        <div class="card">
+          <p class="label">Leyendo</p>
+          <h3>Pale Blue Dot</h3>
+          <p class="by">Carl Sagan</p>
+          <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="360" aria-valuenow="64" aria-label="Progreso de lectura"><i style="width: 18%"></i></div>
+          <p class="bar-note">Página 64 de 360</p>
+        </div>
+        <div class="card">
+          <p class="label">Leyendo entremedio</p>
+          <h3>The DevOps Handbook</h3>
+          <p class="by">Kim, Humble, Debois, Willis y Forsgren</p>
+          <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="45" aria-label="Progreso de lectura"><i style="width: 45%"></i></div>
+          <p class="bar-note">Por la parte de tests automatizados en el pipeline</p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="plan-title">
+      <h2 id="plan-title">El cronograma</h2>
+      <p class="section-intro">Dos carriles en paralelo. Si una semana no da, la siguiente retomo donde quedé, sin compensar.</p>
+      <div class="legend">
+        <span><i class="dot read"></i>Lectura · narrativa, 8–11 páginas por día</span>
+        <span><i class="dot study"></i>Estudio · activo, 3–4 sesiones de 30 min por semana</span>
+      </div>
+      <ol class="timeline">
+        <li class="phase">
+          <div class="when">9 nov → 15 dic<small>2026</small></div>
+          <div class="lane read">
+            <p><a href="#pale-blue-dot">Pale Blue Dot</a><span class="tag-now">ahora</span></p>
+            <p><a href="#devops-handbook">The DevOps Handbook</a> <span class="note">(lo que queda)</span></p>
+          </div>
+          <div class="lane study">
+            <p><a href="#linear-algebra">Essence of Linear Algebra</a> <span class="note">caps. 1–4</span></p>
+          </div>
+        </li>
+        <li class="phase">
+          <div class="when">15 dic → feb<small>2026–2027</small></div>
+          <div class="lane read">
+            <p><a href="#behave">Behave</a></p>
+          </div>
+          <div class="lane study">
+            <p><a href="#linear-algebra">Essence of Linear Algebra</a> <span class="note">caps. 5–16</span></p>
+            <p><a href="#calculus-made-easy">Calculus Made Easy</a> <span class="note">desde febrero</span></p>
+          </div>
+        </li>
+        <li class="phase">
+          <div class="when">mar → abr<small>2027</small></div>
+          <div class="lane read">
+            <p><a href="#determined">Determined</a></p>
+          </div>
+          <div class="lane study">
+            <p><a href="#calculus">Essence of Calculus</a> <span class="note">marzo</span></p>
+            <p><a href="#neural-networks">Neural Networks</a> <span class="note">abril</span></p>
+          </div>
+        </li>
+        <li class="phase">
+          <div class="when">may<small>2027</small></div>
+          <div class="lane read">
+            <p><a href="#six-easy-pieces">Six Easy Pieces</a></p>
+          </div>
+          <div class="lane study">
+            <p>Repaso: regla de la cadena, gradiente, matriz como transformación</p>
+          </div>
+        </li>
+        <li class="phase">
+          <div class="when">jun → ago<small>2027</small></div>
+          <div class="lane read">
+            <p><a href="#napoleons-buttons">Napoleon's Buttons</a> <span class="note">junio</span></p>
+            <p><a href="#the-information">The Information</a> <span class="note">si hay ritmo</span></p>
+          </div>
+          <div class="lane study">
+            <p><a href="#why-machines-learn">Why Machines Learn</a></p>
+          </div>
+        </li>
+        <li class="phase">
+          <div class="when">sep → nov<small>2027</small></div>
+          <div class="lane read">
+            <p><a href="#hamming">The Art of Doing Science and Engineering</a> <span class="note">opcional</span></p>
+          </div>
+          <div class="lane study">
+            <p><a href="#theoretical-minimum">The Theoretical Minimum</a></p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="learn-title">
+      <h2 id="learn-title">Qué voy a aprender con cada uno</h2>
+      <p class="section-intro">En orden de aparición en el cronograma.</p>
+      <div class="items">
+
+        <article class="card item" id="pale-blue-dot">
+          <div class="chips"><span class="chip read">Lectura</span><span class="chip">Astronomía</span><span class="chip">Historia</span></div>
+          <h3>Pale Blue Dot</h3>
+          <p class="by">Carl Sagan · 1994</p>
+          <p class="learn">Nuestro lugar en el cosmos: las "grandes degradaciones" desde Copérnico, qué enseñaron las Voyager de cada planeta, cómo se deduce la química de una atmósfera a partir de su luz y por qué explorar el espacio importa. El hábito de conectar astronomía, química, biología e historia.</p>
+        </article>
+
+        <article class="card item" id="devops-handbook">
+          <div class="chips"><span class="chip read">Lectura</span><span class="chip">Ingeniería</span></div>
+          <h3>The DevOps Handbook</h3>
+          <p class="by">Kim, Humble, Debois, Willis y Forsgren · 2.ª ed.</p>
+          <p class="learn">Pirámide de tests y pruebas automatizadas en el pipeline, integración continua y trunk-based development, releases de bajo riesgo (blue-green, canary, feature toggles), arquitectura para desplegar seguro, telemetría y feedback, postmortems sin culpa y seguridad dentro del pipeline.</p>
+        </article>
+
+        <article class="card item" id="linear-algebra">
+          <div class="chips"><span class="chip study">Estudio</span><span class="chip">Matemática</span><span class="chip">Video</span></div>
+          <h3>Essence of Linear Algebra</h3>
+          <p class="by">3Blue1Brown · 16 videos</p>
+          <p class="learn">Vectores, combinaciones lineales, span y base; la matriz como transformación del espacio y la multiplicación como composición; el determinante como cuánto se escala un área; rango y espacio nulo; producto punto como proyección; cambio de base; autovectores. La base de los embeddings, las redes neuronales y la mecánica cuántica.</p>
+          <p class="foot"><a href="https://www.3blue1brown.com/topics/linear-algebra" target="_blank" rel="noreferrer">Ver la serie gratis →</a></p>
+        </article>
+
+        <article class="card item" id="behave">
+          <div class="chips"><span class="chip read">Lectura</span><span class="chip">Biología</span><span class="chip">Neurociencia</span></div>
+          <h3>Behave</h3>
+          <p class="by">Robert Sapolsky · 2017</p>
+          <p class="learn">Por qué hacemos lo que hacemos, en todas las escalas de tiempo: neuronas y corteza frontal en el segundo previo, hormonas en las horas previas, neuroplasticidad, adolescencia, infancia, genes, cultura y evolución. Después lo aplica a nosotros/ellos, jerarquías, moral y violencia. Lección transversal: desconfiar de las explicaciones de una sola causa.</p>
+        </article>
+
+        <article class="card item" id="calculus-made-easy">
+          <div class="chips"><span class="chip study">Estudio</span><span class="chip">Matemática</span></div>
+          <h3>Calculus Made Easy</h3>
+          <p class="by">Silvanus P. Thompson · 1910</p>
+          <p class="learn">Perderle el miedo a la notación: dx como "un pedacito de x", derivadas, regla de la cadena, máximos y mínimos (es decir, optimización), el número e, logaritmos y la integral como suma de pedacitos. Su lema: "lo que un tonto puede hacer, otro también puede".</p>
+          <p class="foot">Dominio público · <a href="https://www.gutenberg.org/ebooks/33283" target="_blank" rel="noreferrer">Leer gratis en Project Gutenberg →</a></p>
+        </article>
+
+        <article class="card item" id="determined">
+          <div class="chips"><span class="chip read">Lectura</span><span class="chip">Biología</span><span class="chip">Filosofía</span></div>
+          <h3>Determined</h3>
+          <p class="by">Robert Sapolsky · 2023</p>
+          <p class="learn">Lleva <em>Behave</em> a su conclusión: no hay libre albedrío. Por qué el caos, la emergencia y la indeterminación cuántica no lo rescatan, y qué implica para la culpa y el mérito. También es práctica de lectura crítica: es una posición discutida (muchos filósofos son compatibilistas), no un consenso.</p>
+        </article>
+
+        <article class="card item" id="calculus">
+          <div class="chips"><span class="chip study">Estudio</span><span class="chip">Matemática</span><span class="chip">Video</span></div>
+          <h3>Essence of Calculus</h3>
+          <p class="by">3Blue1Brown · 12 videos</p>
+          <p class="learn">La intuición visual de lo mismo que Thompson: la derivada como cociente de cambios diminutos, las reglas de la cadena y del producto vistas geométricamente, por qué e es especial, límites, el teorema fundamental y las series de Taylor.</p>
+          <p class="foot"><a href="https://www.3blue1brown.com/topics/calculus" target="_blank" rel="noreferrer">Ver la serie gratis →</a></p>
+        </article>
+
+        <article class="card item" id="neural-networks">
+          <div class="chips"><span class="chip study">Estudio</span><span class="chip">IA</span><span class="chip">Video</span></div>
+          <h3>Neural Networks</h3>
+          <p class="by">3Blue1Brown</p>
+          <p class="learn">Qué son una neurona y una capa, función de costo, gradient descent, backpropagation y su cálculo; después GPT por dentro: tokens, embeddings, attention y cómo los MLP guardan hechos. Acá converge todo lo anterior.</p>
+          <p class="foot"><a href="https://www.3blue1brown.com/topics/neural-networks" target="_blank" rel="noreferrer">Ver la serie gratis →</a></p>
+        </article>
+
+        <article class="card item" id="six-easy-pieces">
+          <div class="chips"><span class="chip read">Lectura</span><span class="chip">Física</span></div>
+          <h3>Six Easy Pieces</h3>
+          <p class="by">Richard Feynman · 1963 (clases) / 1994 (libro)</p>
+          <p class="learn">La hipótesis atómica, qué fuerzas existen, la relación de la física con la química, la biología, la astronomía y la geología, la conservación de la energía, la gravitación y el comportamiento cuántico. Y, sobre todo, la forma de pensar de Feynman.</p>
+          <p class="foot">Las Lectures completas son gratis: <a href="https://www.feynmanlectures.caltech.edu" target="_blank" rel="noreferrer">feynmanlectures.caltech.edu →</a></p>
+        </article>
+
+        <article class="card item" id="napoleons-buttons">
+          <div class="chips"><span class="chip read">Lectura</span><span class="chip">Química</span><span class="chip">Historia</span></div>
+          <h3>Napoleon's Buttons</h3>
+          <p class="by">Penny Le Couteur y Jay Burreson · 2003</p>
+          <p class="learn">Leer fórmulas estructurales, entender isómeros y quiralidad, y por qué un cambio mínimo de estructura lo cambia todo (glucosa y celulosa, seda y nylon). Diecisiete moléculas detrás de las especias, el escorbuto, los explosivos, la píldora y la malaria.</p>
+        </article>
+
+        <article class="card item" id="why-machines-learn">
+          <div class="chips"><span class="chip study">Estudio</span><span class="chip">IA</span><span class="chip">Matemática</span></div>
+          <h3>Why Machines Learn</h3>
+          <p class="by">Anil Ananthaswamy · 2024</p>
+          <p class="learn">La historia del machine learning con su matemática: el perceptrón y su prueba de convergencia, el producto punto como clasificador, gradient descent, Bayes y probabilidad, la maldición de la dimensionalidad, PCA, SVM y el kernel trick, redes de Hopfield, backpropagation y las preguntas abiertas del deep learning.</p>
+        </article>
+
+        <article class="card item" id="theoretical-minimum">
+          <div class="chips"><span class="chip study">Estudio</span><span class="chip">Física</span><span class="chip">Matemática</span></div>
+          <h3>The Theoretical Minimum</h3>
+          <p class="by">Leonard Susskind y George Hrabovsky · 2013</p>
+          <p class="learn">La física como la ve un físico: espacio de fases, determinismo y reversibilidad, energía, principio de mínima acción, lagrangiano y hamiltoniano, simetrías y leyes de conservación. Al final, ∂L/∂q deja de ser ruido.</p>
+          <p class="foot">Con las clases de Stanford: <a href="https://theoreticalminimum.com" target="_blank" rel="noreferrer">theoreticalminimum.com →</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="backlog" aria-labelledby="backlog-title">
+      <h2 id="backlog-title">En la cola</h2>
+      <p class="section-intro">Menor prioridad. Entran si el ritmo acompaña; si no, quedan para el año siguiente.</p>
+      <div class="items">
+        <article class="card item" id="the-information">
+          <div class="chips"><span class="chip read">Lectura</span><span class="chip">Información</span><span class="chip">Física</span></div>
+          <h3>The Information</h3>
+          <p class="by">James Gleick · 2011</p>
+          <p class="learn">Historia y teoría de la información: tambores parlantes, alfabeto, Babbage y Lovelace, el telégrafo, Shannon y el bit, Turing, el demonio de Maxwell, por qué la entropía de la termodinámica y la de la información están emparentadas, y el ADN como código.</p>
+        </article>
+        <article class="card item" id="hamming">
+          <div class="chips"><span class="chip read">Lectura</span><span class="chip">Ingeniería</span></div>
+          <h3>The Art of Doing Science and Engineering</h3>
+          <p class="by">Richard Hamming · 1997</p>
+          <p class="learn">Cómo piensa un gran científico-ingeniero: estimaciones rápidas, cómo elegir problemas importantes, códigos correctores de errores, simulación, los límites de la IA y la famosa charla "You and Your Research".</p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="papers-title">
+      <h2 id="papers-title">Cómo leer papers sin miedo</h2>
+      <p class="section-intro">Lo que me propongo practicar todo el año. La notación no es difícil: es poco familiar.</p>
+      <div class="tips">
+        <div class="card">
+          <p class="label">La notación es un lenguaje</p>
+          <ul class="glyphs">
+            <li><b>Σ</b><span>un <code>for</code> que va sumando</span></li>
+            <li><b>∫</b><span>una Σ de rebanadas infinitamente finas</span></li>
+            <li><b>d/dx</b><span>cuánto cambia algo si muevo x un poquito</span></li>
+            <li><b>∂</b><span>lo mismo, dejando quietas las demás variables</span></li>
+            <li><b>∇</b><span>el gradiente: hacia dónde sube más rápido</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <p class="label">Tres pasadas</p>
+          <p>1. Título, abstract, figuras y conclusiones, sin tocar ecuaciones.</p>
+          <p>2. El cuerpo del texto, salteando derivaciones.</p>
+          <p>3. Las ecuaciones, solo si el paper lo justifica.</p>
+          <p class="bar-note">Método de S. Keshav, "How to Read a Paper".</p>
+        </div>
+        <div class="card">
+          <p class="label">Hacerla concreta</p>
+          <p>Anotar cada símbolo nuevo en un glosario propio.</p>
+          <p>Si una fórmula no entra, implementarla en diez líneas de Python.</p>
+          <p>Chequear unidades: es el type-checking de la física.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="closing">
+      <p class="principle">Nunca va a alcanzar el tiempo para saberlo todo. <span>Por eso esto es una cola, no una deuda: avanza a su ritmo y siempre queda algo por leer.</span></p>
+    </div>
+
+    <footer>
+      <span>Actualizado el 8 de noviembre de 2026 · <a href="/">patriciocabrera.com</a></span>
+      <span>Ciencia · Matemática · IA</span>
+    </footer>
+  </div>
+</body>
+</html>
