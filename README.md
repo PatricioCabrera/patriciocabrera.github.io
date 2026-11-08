@@ -4,8 +4,11 @@ Source for Patricio Cabrera's professional website, hosted with GitHub Pages.
 
 ## Routes
 
-- `/` — general portfolio landing page
-- `/operations/` — IT Operations & DevOps résumé
+- `/` — personal landing page (Spanish): projects, learning in public and interests
+- `/ciencia/` — science learning plan 2026–2027 (Spanish)
+- `/operations/` — IT Operations & DevOps résumé (English)
+
+The study manuals at `/manual-ia/` and `/manual-gcp/` are published from their own repositories as project pages under this domain.
 
 ## Deployment
 
