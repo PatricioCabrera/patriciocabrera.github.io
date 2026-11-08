@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Notas de Patricio Cabrera: viajes, experiencias y aprendizajes.">
+  <meta name="theme-color" content="#f3f2ec">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:url" content="https://patriciocabrera.com/notas/">
+  <meta property="og:title" content="Notas — Patricio Cabrera">
+  <meta property="og:description" content="Viajes, experiencias y aprendizajes.">
+  <meta property="og:image" content="https://patriciocabrera.com/notas/tiene-que-haber-un-lugar-mejor/grupo.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://patriciocabrera.com/notas/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
+  <link rel="stylesheet" href="/assets/site.css">
+  <title>Notas — Patricio Cabrera</title>
+  <style>
+    .hero { padding: clamp(60px, 10vh, 112px) 0 48px; }
+    .hero .pale-dot { top: 30%; right: 18%; }
+
+    .posts { margin: 0; padding: 0; list-style: none; }
+
+    .post {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(220px, 360px);
+      gap: 32px;
+      align-items: center;
+      padding: 28px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .post:first-child { border-top: 0; padding-top: 0; }
+    .post a { text-decoration: none; }
+    .post h3 { font-size: clamp(1.6rem, 3vw, 2.1rem); line-height: 1.12; font-weight: 400; }
+    .post a:hover h3, .post a:focus-visible h3 { color: var(--blue-ink); }
+    .post .dek { margin: 10px 0 0; color: var(--ink-2); font-family: var(--serif); font-size: 1.12rem; font-style: italic; }
+    .post .meta { margin: 12px 0 0; color: var(--muted); font-size: 0.84rem; }
+    .post img { display: block; width: 100%; height: auto; border-radius: 10px; aspect-ratio: 16 / 10; object-fit: cover; }
+
+    @media (max-width: 760px) {
+      .post { grid-template-columns: 1fr; gap: 18px; }
+      .post .thumb { order: -1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="beam">
+    <div class="shell">
+      <header class="site-header">
+        <a class="wordmark" href="/">Patricio Cabrera</a>
+        <nav class="site-nav" aria-label="Navegación principal">
+          <a href="/notas/" aria-current="page">Notas</a>
+          <a href="/ciencia/">Ciencia</a>
+          <a href="/biblioteca/">Biblioteca</a>
+          <a class="optional" href="/#manuales">Manuales</a>
+        </nav>
+      </header>
+
+      <div class="hero">
+        <span class="pale-dot" aria-hidden="true"></span>
+        <p class="eyebrow">Notas</p>
+        <h1>Lo que voy viviendo.</h1>
+        <p class="lead">Viajes, experiencias y aprendizajes. Escribo para entender lo que me pasa y, si sirve, para que a alguien le sirva también.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="shell">
+    <section class="section" aria-label="Todas las notas">
+      <ul class="posts">
+        <li class="post">
+          <a href="/notas/tiene-que-haber-un-lugar-mejor/">
+            <p class="label">Viajes · Finlandia</p>
+            <h3>Tiene que haber un lugar mejor</h3>
+            <p class="dek">Del chico que confundía la capital con Estados Unidos a un sauna en Finlandia.</p>
+            <p class="meta">8 de noviembre de 2026 · 4 min de lectura</p>
+          </a>
+          <a class="thumb" href="/notas/tiene-que-haber-un-lugar-mejor/" tabindex="-1" aria-hidden="true">
+            <img src="/notas/tiene-que-haber-un-lugar-mejor/grupo.jpg" width="1800" height="1013" alt="">
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <footer class="site-footer">
+      <span>&copy; 2026 Patricio Cabrera · <a href="/">patriciocabrera.com</a></span>
+      <span><em>Un punto azul pálido, visto de cerca.</em></span>
+    </footer>
+  </div>
+</body>
+</html>

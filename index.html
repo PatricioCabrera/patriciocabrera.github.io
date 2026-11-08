@@ -55,11 +55,17 @@
     .shelf b { display: block; font-family: var(--serif); font-size: 1.12rem; font-weight: 500; }
     .shelf span { color: var(--muted); font-size: 0.88rem; }
 
+    a.note-tile { display: grid; grid-template-columns: minmax(220px, 420px) minmax(0, 1fr); gap: 28px; align-items: center; padding: 18px; }
+    a.note-tile img { display: block; width: 100%; height: auto; border-radius: 8px; aspect-ratio: 16 / 10; object-fit: cover; }
+    a.note-tile h3 { font-size: 1.7rem; font-weight: 400; }
+    a.note-tile > span { display: flex; flex-direction: column; }
+
     .contact { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 32px; align-items: end; }
     .contact p.text { margin: 0; color: var(--ink-2); font-size: 1.05rem; max-width: 540px; }
 
     @media (max-width: 900px) {
       .shelf { grid-template-columns: 1fr; }
+      a.note-tile { grid-template-columns: 1fr; }
       .contact { grid-template-columns: 1fr; }
     }
 
@@ -75,9 +81,10 @@
       <header class="site-header">
         <a class="wordmark" href="/">Patricio Cabrera</a>
         <nav class="site-nav" aria-label="Navegación principal">
+          <a href="/notas/">Notas</a>
           <a href="/ciencia/">Ciencia</a>
           <a href="/biblioteca/">Biblioteca</a>
-          <a class="optional-sm" href="#manuales">Manuales</a>
+          <a class="optional" href="#manuales">Manuales</a>
           <a class="optional" href="https://github.com/PatricioCabrera" target="_blank" rel="noreferrer">GitHub</a>
         </nav>
       </header>
@@ -140,6 +147,20 @@
           <span class="go">Leer el manual →</span>
         </a>
       </div>
+    </section>
+
+    <section class="section" aria-labelledby="notes-title">
+      <h2 id="notes-title">Notas</h2>
+      <p class="section-intro">Viajes, experiencias y aprendizajes, contados en primera persona.</p>
+      <a class="card tile note-tile" href="/notas/tiene-que-haber-un-lugar-mejor/">
+        <img src="/notas/tiene-que-haber-un-lugar-mejor/grupo.jpg" width="1800" height="1013" alt="" loading="lazy">
+        <span>
+          <span class="label">Viajes · Finlandia · nov 2026</span>
+          <h3>Tiene que haber un lugar mejor</h3>
+          <span class="desc">Del chico que confundía la capital con Estados Unidos a un sauna en Finlandia: el viaje más esperado de mi vida.</span>
+          <span class="go">Leer la nota →</span>
+        </span>
+      </a>
     </section>
 
     <section class="section" aria-labelledby="library-title">

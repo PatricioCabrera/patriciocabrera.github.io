@@ -7,6 +7,7 @@ Source for Patricio Cabrera's professional website, hosted with GitHub Pages.
 - `/` — personal landing page (Spanish): projects, learning in public and interests
 - `/ciencia/` — science learning plan 2026–2027 (Spanish)
 - `/biblioteca/` — finished books, by topic (Spanish)
+- `/notas/` — blog: travel, experiences and learnings (Spanish); one folder per post with its images
 - `/operations/` — IT Operations & DevOps résumé (English)
 
 The study manuals at `/manual-ia/` and `/manual-gcp/` are published from their own repositories as project pages under this domain.
