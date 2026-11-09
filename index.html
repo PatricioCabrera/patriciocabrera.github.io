@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Patricio Cabrera. Infraestructura y cloud de día; ciencia, historia y filosofía el resto del tiempo. Lo que sé, lo comparto. Lo que dudo, lo muestro. Lo que descubro, lo documento.">
+  <meta name="description" content="Patricio Cabrera. Infraestructura, cloud e IA de día; ciencia, historia, filosofía y música el resto del tiempo. Un cuaderno abierto.">
   <meta name="theme-color" content="#f3f2ec">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_AR">
   <meta property="og:url" content="https://patriciocabrera.com/">
   <meta property="og:title" content="Patricio Cabrera — un cuaderno abierto">
-  <meta property="og:description" content="Lo que sé, lo comparto. Lo que dudo, lo muestro. Lo que descubro, lo documento.">
+  <meta property="og:description" content="Infraestructura, cloud e IA de día; ciencia, historia, filosofía y música el resto del tiempo.">
   <meta property="og:image" content="https://patriciocabrera.com/assets/og-card.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Patricio Cabrera">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Patricio Cabrera — un cuaderno abierto">
-  <meta name="twitter:description" content="Lo que sé, lo comparto. Lo que dudo, lo muestro. Lo que descubro, lo documento.">
+  <meta name="twitter:description" content="Infraestructura, cloud e IA de día; ciencia, historia, filosofía y música el resto del tiempo.">
   <meta name="twitter:image" content="https://patriciocabrera.com/assets/og-card.jpg">
   <link rel="canonical" href="https://patriciocabrera.com/">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -36,17 +36,6 @@
 
     .hero .quote p { font-family: var(--serif); font-size: clamp(2.3rem, 5.4vw, 4.3rem); line-height: 1.06; letter-spacing: -0.02em; }
 
-    .manifesto {
-      margin: 36px 0 0;
-      padding: 0;
-      list-style: none;
-      font-family: var(--serif);
-      font-size: clamp(1.2rem, 2.1vw, 1.42rem);
-      line-height: 1.45;
-    }
-
-    .manifesto li + li { margin-top: 2px; }
-    .manifesto span { color: var(--muted); }
 
     .bio { max-width: 620px; margin: 26px 0 0; color: var(--ink-2); }
 
@@ -66,11 +55,17 @@
     .shelf b { display: block; font-family: var(--serif); font-size: 1.12rem; font-weight: 500; }
     .shelf span { color: var(--muted); font-size: 0.88rem; }
 
+    a.note-tile { display: grid; grid-template-columns: minmax(220px, 420px) minmax(0, 1fr); gap: 28px; align-items: center; padding: 18px; }
+    a.note-tile img { display: block; width: 100%; height: auto; border-radius: 8px; aspect-ratio: 16 / 10; object-fit: cover; }
+    a.note-tile h3 { font-size: 1.7rem; font-weight: 400; }
+    a.note-tile > span { display: flex; flex-direction: column; }
+
     .contact { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 32px; align-items: end; }
     .contact p.text { margin: 0; color: var(--ink-2); font-size: 1.05rem; max-width: 540px; }
 
     @media (max-width: 900px) {
       .shelf { grid-template-columns: 1fr; }
+      a.note-tile { grid-template-columns: 1fr; }
       .contact { grid-template-columns: 1fr; }
     }
 
@@ -86,9 +81,10 @@
       <header class="site-header">
         <a class="wordmark" href="/">Patricio Cabrera</a>
         <nav class="site-nav" aria-label="Navegación principal">
+          <a href="/notas/">Notas</a>
           <a href="/ciencia/">Ciencia</a>
           <a href="/biblioteca/">Biblioteca</a>
-          <a class="optional-sm" href="#manuales">Manuales</a>
+          <a class="optional" href="#manuales">Manuales</a>
           <a class="optional" href="https://github.com/PatricioCabrera" target="_blank" rel="noreferrer">GitHub</a>
         </nav>
       </header>
@@ -101,16 +97,11 @@
             <p>Cuando un hombre no sabe hacia dónde navega, ningún viento le es favorable.</p>
             <cite>Séneca, Cartas a Lucilio, 71 · ignoranti quem portum petat nullus suus ventus est</cite>
           </blockquote>
-          <ul class="manifesto">
-            <li>Lo que sé, lo comparto.</li>
-            <li>Lo que dudo, lo muestro.</li>
-            <li>Lo que descubro, lo documento.</li>
-          </ul>
           <p class="bio">
-            Soy Patricio. Todo empezó sin saber hacia dónde navegar: sin un peso, sin trabajo y sabiendo que el sistema educativo me había fallado. En 2019 entré a soporte técnico, y desde ahí fui armando el camino con práctica, estudiando por mi cuenta y con la confianza de quienes me dieron una oportunidad. Hoy trabajo en infraestructura y cloud.
+            Soy Patricio. Todo empezó sin saber hacia dónde navegar: sin un peso, sin trabajo y sabiendo que el sistema educativo me había fallado. En 2019 entré a soporte técnico, y desde ahí fui armando el camino con práctica, estudiando por mi cuenta y con la confianza de quienes me dieron una oportunidad. Hoy trabajo en infraestructura y cloud, y mi desafío es que el uso de la IA escale: pasar de experimentos sueltos a algo sostenible, con ingeniería de plataforma y DevOps.
           </p>
           <p class="bio" style="margin-top: 14px;">
-            Fuera del trabajo leo ciencia, historia y filosofía, y le hago lugar a la música. Escribo para entender lo que aprendo. Esta página es eso: un cuaderno abierto.
+            Soy polímata por naturaleza: fuera del trabajo leo ciencia, historia y filosofía, y le hago lugar a la música. Escribo para entender lo que aprendo. Esta página es eso: un cuaderno abierto.
           </p>
           <div class="actions">
             <a class="button primary" href="/ciencia/">Mi año de ciencia</a>
@@ -124,7 +115,7 @@
             <li><small>Leyendo</small><span><a href="/ciencia/#pale-blue-dot">Pale Blue Dot</a>, de Carl Sagan</span></li>
             <li><small>Estudiando</small><span><a href="/ciencia/#linear-algebra">Álgebra lineal</a>, con 3Blue1Brown</span></li>
             <li><small>Construyendo</small><span><a href="https://github.com/PatricioCabrera/CloudLaunchpad" target="_blank" rel="noreferrer">CloudLaunchpad</a>, una plataforma AWS desde cero</span></li>
-            <li><small>En el trabajo</small><span>Plataforma AWS multi-cuenta, gobierno cloud y FinOps</span></li>
+            <li><small>En el trabajo</small><span>IA escalable con ingeniería de plataforma y DevOps</span></li>
           </ul>
           <p class="updated">Actualizado en noviembre de 2026</p>
         </aside>
@@ -156,6 +147,20 @@
           <span class="go">Leer el manual →</span>
         </a>
       </div>
+    </section>
+
+    <section class="section" aria-labelledby="notes-title">
+      <h2 id="notes-title">Notas</h2>
+      <p class="section-intro">Viajes, experiencias y aprendizajes, contados en primera persona.</p>
+      <a class="card tile note-tile" href="/notas/tiene-que-haber-un-lugar-mejor/">
+        <img src="/notas/tiene-que-haber-un-lugar-mejor/grupo.jpg" width="1800" height="1013" alt="" loading="lazy">
+        <span>
+          <span class="label">Viajes · Finlandia · nov 2026</span>
+          <h3>Tiene que haber un lugar mejor</h3>
+          <span class="desc">Del chico que confundía la capital con Estados Unidos a un sauna en Finlandia: el viaje más esperado de mi vida.</span>
+          <span class="go">Leer la nota →</span>
+        </span>
+      </a>
     </section>
 
     <section class="section" aria-labelledby="library-title">

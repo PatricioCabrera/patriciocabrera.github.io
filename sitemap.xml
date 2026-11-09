@@ -15,4 +15,14 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://patriciocabrera.com/notas/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://patriciocabrera.com/notas/tiene-que-haber-un-lugar-mejor/</loc>
+    <lastmod>2026-11-08</lastmod>
+    <priority>0.7</priority>
+  </url>
 </urlset>
